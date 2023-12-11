@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Vs2022
+.vs/
+Debug/
+Release/
