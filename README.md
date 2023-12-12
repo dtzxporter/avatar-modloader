@@ -12,7 +12,8 @@ Overrides unpacked assets from the game directory when they exist allowing you t
 
 ### Texture modding:
 - In order to mod textures, the DDS needs to be converted to a 'DDS' with STF header.
-- You need to reverse the mipmap order on disk.
+- You need to reverse the mipmap order on disk. (Smallest first, largest last) which is the opposite of a DDS.
+- Delete the DDS header.
 - Then copy the proper STF header extracted from the game: [STF Headers](https://mega.nz/file/4chxAJBZ#GvW1ojCapMK--PtzPGr_B9g0xvIRRkSDEfTP8JZ9gUI).
 - The extension is still `.dds`.
 
