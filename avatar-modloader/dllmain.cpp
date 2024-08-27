@@ -10,7 +10,7 @@ typedef bool (__fastcall *open_file_stream_proc)(__int64 stream, LPCSTR file_pat
 uintptr_t old_getsystemtimeasfiletime = 0;
 open_file_stream_proc old_open_file_stream = nullptr;
 
-const LPCSTR patterns[] = { "48 89 5C 24 ? 55 56 57 41 54 41 55 41 56 41 57 48 81 EC ? ? ? ? 41 8B F8" };
+const LPCSTR patterns[] = { "4C 8B DC 53 57 41 54 48 81 EC ? ? ? ? 41 8B D8" };
 
 /// <summary>
 /// Checks if a file exists, also supports relative file paths.
@@ -66,7 +66,7 @@ DWORD WINAPI hk_getsystemtimeasfiletime(LPCWSTR lpSystemTimeAsFileTime) {
 
     if (Result == (uintptr_t)-1)
     {
-        MessageBoxA(GetActiveWindow(), "Failed to find required modloader functions! Mod support will not be available.", "Avatar ModLoader", MB_OK | MB_ICONERROR);
+        MessageBoxA(GetActiveWindow(), "Failed to find required modloader functions! Mod support will not be available.", "Outlaws ModLoader", MB_OK | MB_ICONERROR);
     }
     else
     {
